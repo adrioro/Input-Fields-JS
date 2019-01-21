@@ -5,7 +5,14 @@ var app = {};
 app.getElement = function (element) {
     return document.getElementById(element);
 }
+
+//Get elements required
+
 app.entry = app.getElement("entry");
 app.output = app.getElement("output");
 
-//Get elements required
+//Creat event handler
+
+app.entry.onkeyup = function () {
+    app.output.innerText = this.value;
+}
